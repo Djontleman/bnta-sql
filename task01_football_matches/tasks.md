@@ -98,13 +98,13 @@ SELECT * FROM matches WHERE division_code = 'E0' ORDER BY fthg + ftag DESC, fthg
 
 ```sql
 -- Find match --
-SELECT * FROM matches ORDER BY fthg + ftag DESC LIMIT 1;
+SELECT * FROM matches GROUP BY division_code, season ORDER BY SUM(fthg + ftag) DESC LIMIT 1;
 
 -- Find division code and season --
-SELECT division_code, season FROM matches ORDER BY fthg + ftag DESC LIMIT 1;
+SELECT division_code, season, SUM(fthg + ftag) FROM matches GROUP BY division_code, season ORDER BY SUM(fthg + ftag) DESC LIMIT 1;
 
 -- Find division name --
-football=# SELECT name FROM divisions WHERE code = 'N1';
+football=# SELECT name FROM divisions WHERE code = 'EC';
 
 ```
 
