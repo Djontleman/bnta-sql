@@ -97,8 +97,14 @@ SELECT * FROM matches WHERE division_code = 'E0' ORDER BY fthg + ftag DESC, fthg
 10) In which division and which season were the most goals scored?
 
 ```sql
-<!-- Copy solution here -->
+-- Find match --
+SELECT * FROM matches ORDER BY fthg + ftag DESC LIMIT 1;
 
+-- Find division code and season --
+SELECT division_code, season FROM matches ORDER BY fthg + ftag DESC LIMIT 1;
+
+-- Find division name --
+football=# SELECT name FROM divisions WHERE code = 'N1';
 
 ```
 
