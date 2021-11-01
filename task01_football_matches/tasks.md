@@ -5,32 +5,31 @@ Each of the questions/tasks below can be answered using a `SELECT` query. When y
 1) Find all the matches from 2017.
 
 ```sql
-<!-- Copy solution here -->
-
+SELECT * FROM matches WHERE season = 2017;
 
 ```
 
 2) Find all the matches featuring Barcelona.
 
 ```sql
-<!-- Copy solution here -->
-
+SELECT * FROM matches WHERE hometeam = 'Barcelona' or awayteam = 'Barcelona';
 
 ```
 
 3) What are the names of the Scottish divisions included?
 
 ```sql
-<!-- Copy solution here -->
-
+SELECT name FROM divisions WHERE country = 'Scotland';
 
 ```
 
 4) Find the division code for the Bundesliga. Use that code to find out how many matches Freiburg have played in the Bundesliga since the data started being collected.
 
 ```sql
-<!-- Copy solution here -->
+<!-- find code -->
+SELECT code FROM divisions WHERE name = 'Bundesliga';
 
+SELECT * FROM matches WHERE (hometeam = 'Freiburg' or awayteam = 'Freiburg') and division_code = 'D1';
 
 ```
 
