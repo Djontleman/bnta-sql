@@ -79,7 +79,7 @@ SELECT COUNT(*) FROM matches WHERE (hometeam = 'Huddersfield' and awayteam = 'Sw
 SELECT code FROM divisions WHERE name = 'Eredivisie';
 
 -- Find number of matches --
-SELECT COUNT(*) FROM matches WHERE ftr = 'D' AND season BETWEEN 2010 AND 2013;
+SELECT COUNT(*) FROM matches WHERE division_code = 'N1' AND ftr = 'D' AND season BETWEEN 2010 AND 2015;
 
 ```
 
