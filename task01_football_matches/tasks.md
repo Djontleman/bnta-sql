@@ -86,8 +86,11 @@ SELECT COUNT(*) FROM matches WHERE ftr = 'D' AND season BETWEEN 2010 AND 2013;
 9) Select the matches played in the Premier League in order of total goals scored from highest to lowest. Where there is a tie the match with more home goals should come first.
 
 ```sql
-<!-- Copy solution here -->
+-- Find code --
+SELECT code FROM divisions WHERE name = 'Premier League';
 
+-- Find matches --
+SELECT * FROM matches WHERE division_code = 'E0' ORDER BY fthg + ftag DESC, fthg DESC;
 
 ```
 
