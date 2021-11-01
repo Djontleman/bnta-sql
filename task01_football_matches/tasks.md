@@ -37,8 +37,10 @@ SELECT * FROM matches WHERE (hometeam = 'Freiburg' or awayteam = 'Freiburg') and
 5) Find the unique names of the teams which include the word "City" in their name (as entered in the database)
 
 ```sql
-<!-- Copy solution here -->
-
+SELECT DISTINCT(hometeam) FROM matches WHERE hometeam LIKE '%City%';
+-- Or --
+SELECT hometeam FROM matches WHERE hometeam LIKE '%City%' GROUP BY hometeam;
+-- Can use awayteam instead of hometeam as well -- 
 
 ```
 
