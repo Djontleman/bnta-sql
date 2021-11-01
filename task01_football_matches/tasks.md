@@ -51,7 +51,7 @@ SELECT hometeam FROM matches WHERE hometeam LIKE '%City%' GROUP BY hometeam;
  SELECT * FROM divisions WHERE country = 'France';
 
 -- Find number of different teams -- 
- SELECT COUNT(DISTINCT hometeam) FROM matches WHERE division_code = 'F1' or division_code = 'F2';
+ SELECT COUNT(DISTINCT hometeam) FROM matches WHERE division_code IN ('F1', 'F2');
 
 
 -- SELECT hometeam FROM matches WHERE division_code = 'F1' or division_code = 'F2' GROUP BY hometeam;
