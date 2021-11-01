@@ -47,7 +47,14 @@ SELECT hometeam FROM matches WHERE hometeam LIKE '%City%' GROUP BY hometeam;
 6) How many different teams have played in matches recorded in a French division?
 
 ```sql
-<!-- Copy solution here -->
+-- Find French divsions --
+ SELECT * FROM divisions WHERE country = 'France';
+
+-- Find number of different teams -- 
+ SELECT COUNT(DISTINCT hometeam) FROM matches WHERE division_code = 'F1' or division_code = 'F2';
+
+
+-- SELECT hometeam FROM matches WHERE division_code = 'F1' or division_code = 'F2' GROUP BY hometeam;
 
 
 ```
