@@ -62,8 +62,13 @@ SELECT hometeam FROM matches WHERE hometeam LIKE '%City%' GROUP BY hometeam;
 7) Have Huddersfield played Swansea in the period covered?
 
 ```sql
-<!-- Copy solution here -->
+-- Returns all matches --
+SELECT * FROM matches WHERE (hometeam = 'Huddersfield' and awayteam = 'Swansea') or (hometeam = 'Swansea' and awayteam = 'Huddersfield');
+-- If anything returns, Huddersfield have played Swansea --
 
+-- Returns number of matches--
+SELECT * FROM matches WHERE (hometeam = 'Huddersfield' and awayteam = 'Swansea') or (hometeam = 'Swansea' and awayteam = 'Huddersfield');
+-- If count > 0, Huddersfield have played Swansea --
 
 ```
 
