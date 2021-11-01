@@ -67,7 +67,7 @@ SELECT * FROM matches WHERE (hometeam = 'Huddersfield' and awayteam = 'Swansea')
 -- If anything returns, Huddersfield have played Swansea --
 
 -- Returns number of matches--
-SELECT * FROM matches WHERE (hometeam = 'Huddersfield' and awayteam = 'Swansea') or (hometeam = 'Swansea' and awayteam = 'Huddersfield');
+SELECT COUNT(*) FROM matches WHERE (hometeam = 'Huddersfield' and awayteam = 'Swansea') or (hometeam = 'Swansea' and awayteam = 'Huddersfield');
 -- If count > 0, Huddersfield have played Swansea --
 
 ```
